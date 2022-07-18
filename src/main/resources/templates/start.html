@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>start</title>
 </head>
 <body>
+<h1>INFO:</h1>
+<p th:text="${info}"/>
 <h1>You in START</h1>
+
+<li>
+    <a th:href="@{/start}">start</a>
+</li>
+<li>
+    <a th:href="@{/add}">add</a>
+</li>
+<li>
+    <a th:href="@{/view}">view</a>
+</li>
 </body>
 </html>

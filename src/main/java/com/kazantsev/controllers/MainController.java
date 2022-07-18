@@ -1,17 +1,24 @@
-package com.kazantsev;
+package com.kazantsev.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MainController {
     @GetMapping("/")
-    public String start(){
+    public String start(Model model){
+        model.addAttribute("info","You Enter");
         return  "start";
     }
 
-    @GetMapping("home")
+    @GetMapping("/home")
     public  String home(){
         return "home";
     }
+
+
+
+
+
 }

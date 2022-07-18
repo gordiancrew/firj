@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>VIEW</title>
+</head>
+<body>
+<li>
+    <a th:href="@{/}">start</a>
+</li>
+<h1>view</h1>
+<table>
+    <tr>
+        <th>NAME</th>
+        <th>type</th>
+    </tr>
+    <tr th:each="cat : ${list}">
+        <td th:text="${cat.name}"/>
+        <td th:text="${cat.type}"/>
+
+    </tr>
+</table>
+
+</body>
+</html>
